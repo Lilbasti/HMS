@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IZWN Hotel Rooms</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    display:flex;
+    min-height:100vh;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width:250px;
+    background:#0f172a;
+    color:white;
+    position:fixed;
+    height:100vh;
+    padding:25px;
+    box-shadow:5px 0 20px rgba(0,0,0,.15);
+}
+
+.sidebar h2{
+    text-align:center;
+    color:#D4AF37;
+    margin-bottom:35px;
+    font-size:28px;
+    letter-spacing:2px;
+}
+
+.sidebar a{
+    display:block;
+    text-decoration:none;
+    color:white;
+    padding:14px 18px;
+    margin-bottom:10px;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.sidebar a:hover{
+    background:#D4AF37;
+}
+
+/* PAGE */
+
+.page{
+    margin-left:250px;
+    width:100%;
+}
+
+/* HEADER */
+
+.header{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:50px 20px;
+}
+
+.header h1{
+    font-size:48px;
+    color:#D4AF37;
+}
+
+.header p{
+    margin-top:10px;
+    font-size:18px;
+}
+
+/* ROOMS */
+
+.rooms{
+    padding:40px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:30px;
+}
+
+.room-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+    transition:.3s;
+}
+
+.room-card:hover{
+    transform:translateY(-8px);
+}
+
+.room-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.room-info{
+    padding:25px;
+}
+
+.room-info h2{
+    color:#D4AF37;
+    margin-bottom:10px;
+}
+
+.room-info p{
+    color:#555;
+    margin-bottom:15px;
+}
+
+.feature{
+    margin-bottom:8px;
+    color:#333;
+}
+
+.price{
+    font-size:24px;
+    font-weight:700;
+    color:#0f172a;
+    margin:15px 0;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#D4AF37;
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    opacity:.9;
+}
+
+/* FOOTER */
+
+.footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+.footer strong{
+    color:#D4AF37;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    body{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        position:relative;
+        width:100%;
+        height:auto;
+    }
+
+    .page{
+        margin-left:0;
+    }
+
+    .rooms{
+        padding:20px;
+    }
+
+    .header h1{
+        font-size:36px;
+    }
+}
+
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+
+    <h2>IZWN HOTEL</h2>
+
+    <a href="user_page.php">Dashboard</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="rooms.html">Rooms</a>
+    <a href="index.php">Logout</a>
+
+</div>
+
+<div class="page">
+
+    <div class="header">
+        <h1>Luxury Rooms</h1>
+        <p>Experience comfort, elegance, and world-class hospitality.</p>
+    </div>
+
+    <div class="rooms">
+
+        <!-- NORMAL ROOM -->
+        <div class="room-card">
+            <img src="Images/room.jpg" alt="Normal Room">
+
+            <div class="room-info">
+                <h2>Normal Room</h2>
+                <p>A comfortable and affordable room perfect for short stays.</p>
+
+                <div class="feature">✔ Free WiFi</div>
+                <div class="feature">✔ Air Conditioning</div>
+                <div class="feature">✔ TV</div>
+
+                <div class="price">₱1,200 / Night</div>
+
+                <button>Book Now</button>
+            </div>
+        </div>
+
+        <!-- DELUXE ROOM -->
+        <div class="room-card">
+            <img src="Images/delux1.jpg" alt="Deluxe Room">
+
+            <div class="room-info">
+                <h2>Deluxe Room</h2>
+                <p>A spacious room with elegant interior and extra comfort.</p>
+
+                <div class="feature">✔ Free WiFi</div>
+                <div class="feature">✔ Smart TV</div>
+                <div class="feature">✔ Mini Refrigerator</div>
+
+                <div class="price">₱2,200 / Night</div>
+
+                <button>Book Now</button>
+            </div>
+        </div>
+
+        <!-- KING SUITE -->
+        <div class="room-card">
+            <img src="Images/king1.jpg" alt="King Suite">
+
+            <div class="room-info">
+                <h2>King Suite</h2>
+                <p>Our most luxurious room with premium amenities.</p>
+
+                <div class="feature">✔ King Size Bed</div>
+                <div class="feature">✔ Free WiFi</div>
+                <div class="feature">✔ Smart TV</div>
+                <div class="feature">✔ Mini Bar</div>
+
+                <div class="price">₱3,500 / Night</div>
+
+                <button>Book Now</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p><strong>IZWN HOTEL</strong></p>
+        <p>Email: izwn_hotel@ourhotel.com</p>
+        <p>Phone: +63 912 345 6789</p>
+        <p>Address: Cebu City, Philippines</p>
+    </div>
+
+</div>
+
+</body>
+</html>
